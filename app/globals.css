@@ -298,6 +298,16 @@ body::after {
   font-variant-numeric: tabular-nums;
 }
 
+/* Horizontal scroll without a visible bar — for tab strips and chip rows
+   that must never force the page to overflow on narrow screens. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @layer components {
   .btn {
     display: inline-flex;

@@ -132,6 +132,31 @@ O validador garante, entre outras coisas, que:
 
 ---
 
+## Tipografia
+
+Todos os tamanhos vêm de uma escala única declarada no topo de
+`app/globals.css`, em `rem` — então o app respeita a preferência de tamanho de
+fonte do navegador, e subir/descer a escala inteira é editar uma linha.
+
+```
+0.6875rem  11px   rótulos micro
+0.75rem    12px   eyebrows, badges
+0.8125rem  13px   metadados
+0.875rem   14px   UI secundária
+0.9375rem  15px   UI padrão
+1.0625rem  17px   corpo de texto
+1.125rem   18px   parágrafo de abertura
+1.3125rem  21px   subtítulos
+1.5rem     24px   títulos de seção
+2.25rem    36px   títulos de página
+2.625rem   42px   hero
+```
+
+Frases em inglês usam mono com um ajuste óptico de `0.94em` (`.en`), porque a
+monoespaçada lê menor que a sans no mesmo corpo.
+
+---
+
 ## Decisões de projeto
 
 - **Conteúdo como dados, não como MDX.** Isso permite validar semanticamente,

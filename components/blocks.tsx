@@ -282,8 +282,10 @@ export function Block({ block, index }: { block: ContentBlock; index: number }) 
               {block.title}
             </figcaption>
           )}
-          <pre className="overflow-x-auto rounded-[var(--radius-lg)] border border-[var(--line-soft)] bg-[var(--bg-deep)] px-4 py-3.5 text-[0.875rem] leading-[1.85] text-[var(--fg-strong)]">
-            <code className="en">{block.lines.join("\n")}</code>
+          {/* Mono comes from the <pre> itself, not from `.en` — `.en` also
+              applies a 0.94em optical shrink, which would compound here. */}
+          <pre className="overflow-x-auto rounded-[var(--radius-lg)] border border-[var(--line-soft)] bg-[var(--bg-deep)] px-4 py-3.5 font-[family-name:var(--font-mono)] text-[0.875rem] leading-[1.85] tracking-[-0.01em] text-[var(--fg-strong)]">
+            <code>{block.lines.join("\n")}</code>
           </pre>
           {block.caption && (
             <p className="mt-1.5 text-[0.875rem] text-[var(--fg-muted)]">

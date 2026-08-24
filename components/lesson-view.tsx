@@ -118,7 +118,7 @@ export function LessonView({
 
       {/* ------------------------------ tabs ----------------------------- */}
       <div className="sticky top-16 z-30 -mx-4 mb-6 border-b border-[var(--line-soft)] bg-[color-mix(in_oklab,var(--bg)_88%,transparent)] px-4 backdrop-blur-xl sm:mx-0 sm:px-0">
-        <div className="flex gap-1">
+        <div className="no-scrollbar flex gap-1 overflow-x-auto">
           {(
             [
               { id: "read", label: "Lição", Icon: IconBook, meta: `${lesson.blocks.length} blocos` },
@@ -136,7 +136,7 @@ export function LessonView({
                 key={t.id}
                 type="button"
                 onClick={() => setTab(t.id)}
-                className="relative flex items-center gap-2 px-3.5 py-3 text-[0.9375rem] font-medium transition-colors"
+                className="relative flex shrink-0 items-center gap-2 px-3 py-3 text-[0.9375rem] font-medium transition-colors"
                 style={{ color: active ? "var(--fg-strong)" : "var(--fg-muted)" }}
               >
                 <t.Icon className="h-4 w-4" />
