@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.env*.local
+
+# Material de origem (8.8 MB). O curso já foi transposto para lib/content/.
+# Remova esta linha se quiser versionar o PDF junto.
+Practical-English.pdf

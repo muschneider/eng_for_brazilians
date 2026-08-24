@@ -1,0 +1,40 @@
+{
+  "name": "practical-english",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practical English — interactive learning app for Portuguese speakers",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx scripts/validate-content.ts",
+    "check": "npm run typecheck && npm run lint && npm run validate"
+  },
+  "dependencies": {
+    "next": "^16.3.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
+    "@tailwindcss/postcss": "4.1.14",
+    "@types/node": "24.6.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "9.37.0",
+    "eslint-config-next": "^16.3.2",
+    "postcss": "8.5.6",
+    "tailwindcss": "4.1.14",
+    "tsx": "^4.20.3",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "allowScripts": {
+    "@tailwindcss/oxide@4.1.14": true,
+    "unrs-resolver@1.12.2": true
+  }
+}
