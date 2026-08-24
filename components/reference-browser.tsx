@@ -29,8 +29,10 @@ export function ReferenceBrowser({ sheets }: { sheets: ReferenceSheet[] }) {
       </header>
 
       <div className="grid gap-6 lg:grid-cols-[15rem_1fr]">
-        {/* sheet picker */}
-        <nav className="lg:sticky lg:top-20 lg:self-start">
+        {/* Sheet picker. `min-w-0` is required: a grid item defaults to
+            `min-width: auto`, which lets the horizontally-scrolling <ul>
+            stretch the whole track and break the page layout on mobile. */}
+        <nav className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <ul className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
             {sheets.map((s) => {
               const on = s.id === activeId;

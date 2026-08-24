@@ -206,7 +206,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -382,8 +382,11 @@ body::after {
     white-space: nowrap;
   }
 
+  /* The <pre> already carries the intended size; `.en` would shrink it a
+     second time via its 0.94em optical adjustment. */
   .prose-lesson pre > code {
     white-space: pre;
+    font-size: 1em;
     background: none;
     border: 0;
     padding: 0;

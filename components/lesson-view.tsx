@@ -117,7 +117,7 @@ export function LessonView({
       </header>
 
       {/* ------------------------------ tabs ----------------------------- */}
-      <div className="sticky top-14 z-30 -mx-4 mb-6 border-b border-[var(--line-soft)] bg-[color-mix(in_oklab,var(--bg)_88%,transparent)] px-4 backdrop-blur-xl sm:mx-0 sm:px-0">
+      <div className="sticky top-16 z-30 -mx-4 mb-6 border-b border-[var(--line-soft)] bg-[color-mix(in_oklab,var(--bg)_88%,transparent)] px-4 backdrop-blur-xl sm:mx-0 sm:px-0">
         <div className="flex gap-1">
           {(
             [
